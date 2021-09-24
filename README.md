@@ -1,4 +1,6 @@
-# Udacity Deep Reinforcement Learning Nanodegree - Project 1: Navigation
+# Udacity Deep Reinforcement Learning Nanodegree - <br /> Project 1: Navigation
+
+![trained_agent](https://github.com/julesser/DeepRL-P1-Navigation/blob/main/fig/trained_agent.gif)
 
 ## Introduction
 In this project, I built an reinforcement learning (RL) agent  that navigates an environment similar to [Unity's Banana environment](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#banana-collector).
@@ -38,3 +40,12 @@ The neural network architecture (`model.py`) is implemented via PyTorch and cont
 As for the network inputs, rather than feeding-in sequential batches of experience tuples, I randomly sample from a history of experiences using an approach called Experience Replay.
 ### Experience Replay
 Experience replay allows the RL agent to learn from past experience, by storing filling a replay buffer as the agent interacts with the environment (see `agent.step()`) The replay buffer contains a collection of experience tuples with the state, action, reward, and next state (s, a, r, s'). 
+
+## Results
+The implemented RL agent is able to solve the environment in <400 episodes: 
+
+![training_results](https://github.com/julesser/DeepRL-P1-Navigation/blob/main/fig/training_results.png)
+
+## Ideas for Future Improvements
+- Implement DQN improvements (e.g prioritized experience replay, dueling DQN etc.)
+- Directly learn from pixels instead of ray-based perception
