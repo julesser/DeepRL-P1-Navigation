@@ -63,7 +63,7 @@ def dqn(n_episodes=500, eps_start=1.0, eps_end=0.01, eps_decay=0.995):
 
 
 # 1. Create environment
-env = UnityEnvironment(file_name="Simulator/Banana.x86_64")
+env = UnityEnvironment(file_name="simulator/Banana.x86_64")
 brain_name = env.brain_names[0]  # get default brain
 brain = env.brains[brain_name]
 env_info = env.reset(train_mode=True)[brain_name]  # reset environment

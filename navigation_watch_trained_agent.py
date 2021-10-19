@@ -7,7 +7,7 @@ import torch
 from dqn_agent import Agent
 
 # 1. Create environment
-env = UnityEnvironment(file_name="Simulator/Banana.x86_64")
+env = UnityEnvironment(file_name="simulator/Banana.x86_64")
 brain_name = env.brain_names[0]  # get default brain
 brain = env.brains[brain_name]
 env_info = env.reset(train_mode=False)[brain_name]  # reset environment
